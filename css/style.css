@@ -779,3 +779,135 @@ a {
         max-width: 100%;
     }
 }
+
+/* =========================================
+   SERVICES PAGE
+========================================= */
+
+.page-hero {
+    background: var(--navy);
+    color: var(--white);
+    text-align: center;
+}
+
+.page-hero-content {
+    max-width: 850px;
+    padding: 90px 0;
+    margin: 0 auto;
+}
+
+.page-hero-content .section-eyebrow {
+    color: var(--yellow);
+}
+
+.page-hero h1 {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1.08;
+    letter-spacing: -0.035em;
+    margin-bottom: 20px;
+}
+
+.page-hero p:last-child {
+    max-width: 680px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 1.05rem;
+}
+
+.services-page {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.service-category + .service-category {
+    margin-top: 100px;
+}
+
+.service-category-heading {
+    max-width: 720px;
+    margin-bottom: 40px;
+}
+
+.service-category-heading h2 {
+    color: var(--navy);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    line-height: 1.15;
+    margin-bottom: 14px;
+}
+
+.service-category-heading p:last-child {
+    color: var(--gray);
+    font-size: 1rem;
+}
+
+.service-detail-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.service-detail-card {
+    padding: 32px 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--white);
+    box-shadow: var(--shadow-sm);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.service-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: rgba(245, 196, 0, 0.55);
+}
+
+.service-detail-card .service-icon {
+    margin-bottom: 20px;
+}
+
+.service-detail-card h3 {
+    color: var(--navy);
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.service-detail-card p {
+    color: var(--gray);
+    font-size: 0.92rem;
+}
+
+
+/* =========================================
+   SERVICES PAGE RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .service-detail-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .page-hero-content {
+        padding: 70px 0;
+    }
+
+    .services-page {
+        padding: 75px 0;
+    }
+
+    .service-category + .service-category {
+        margin-top: 70px;
+    }
+
+    .service-detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
