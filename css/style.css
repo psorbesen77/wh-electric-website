@@ -911,3 +911,254 @@ a {
     }
 
 }
+
+/* =========================================
+   ABOUT PAGE
+========================================= */
+
+.about-story {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.about-story-grid {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-image {
+    display: flex;
+    justify-content: center;
+}
+
+.about-image-placeholder {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 4 / 3;
+    border-radius: 14px;
+    background:
+        linear-gradient(
+            145deg,
+            #dce5eb,
+            #b8c6d1
+        );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--navy);
+    font-size: 1rem;
+    font-weight: 900;
+    letter-spacing: 0.16em;
+    box-shadow: var(--shadow-sm);
+}
+
+.about-content h2 {
+    color: var(--navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+
+.about-content p:not(.section-eyebrow) {
+    color: var(--gray);
+    max-width: 650px;
+    margin-bottom: 18px;
+}
+
+
+/* =========================================
+   VALUES
+========================================= */
+
+.values-section {
+    padding: 100px 0;
+    background: var(--light);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.value-card {
+    padding: 32px 27px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.value-number {
+    color: var(--yellow-hover);
+    font-weight: 900;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 20px;
+}
+
+.value-card h3 {
+    color: var(--navy);
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.value-card p {
+    color: var(--gray);
+    font-size: 0.92rem;
+}
+
+
+/* =========================================
+   TRUST SECTION
+========================================= */
+
+.trust-section {
+    padding: 100px 0;
+    background: var(--white);
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.trust-content h2 {
+    color: var(--navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.trust-content > p:not(.section-eyebrow) {
+    color: var(--gray);
+    max-width: 630px;
+    margin-bottom: 30px;
+}
+
+.trust-list {
+    display: grid;
+    gap: 14px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+
+.trust-item span {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    flex-shrink: 0;
+}
+
+.trust-item p {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+.trust-highlight {
+    display: flex;
+    justify-content: center;
+}
+
+.trust-highlight-inner {
+    width: 100%;
+    max-width: 470px;
+    min-height: 360px;
+    padding: 50px 40px;
+    border-radius: 14px;
+    background: var(--navy);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-highlight-inner::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: 50px solid rgba(245, 196, 0, 0.08);
+    border-radius: 50%;
+}
+
+.trust-lightning {
+    font-size: 4rem;
+    color: var(--yellow);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.trust-highlight-inner h3 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.trust-highlight-inner p {
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 300px;
+    position: relative;
+}
+
+
+/* =========================================
+   ABOUT PAGE RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .about-story-grid,
+    .trust-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-content,
+    .trust-content {
+        max-width: 720px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .about-story,
+    .values-section,
+    .trust-section {
+        padding: 75px 0;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-highlight-inner {
+        min-height: 300px;
+        padding: 40px 25px;
+    }
+
+}
