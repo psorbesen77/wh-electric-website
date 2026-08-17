@@ -1162,3 +1162,286 @@ a {
     }
 
 }
+
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-section {
+    padding: 100px 0;
+    background: var(--light);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 70px;
+    align-items: start;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-info h2 {
+    color: var(--navy);
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.contact-intro {
+    color: var(--gray);
+    max-width: 500px;
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 23px;
+    color: var(--dark);
+}
+
+.contact-item:hover .contact-icon {
+    background: var(--yellow-hover);
+}
+
+.contact-icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--yellow);
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: background-color 0.2s ease;
+}
+
+.contact-item div:last-child {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-item span {
+    color: var(--gray);
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 3px;
+}
+
+.contact-item strong {
+    color: var(--navy);
+    font-size: 1rem;
+}
+
+.contact-item small {
+    color: var(--gray);
+    font-size: 0.82rem;
+    margin-top: 2px;
+}
+
+
+/* =========================================
+   CONTACT CALLOUT
+========================================= */
+
+.contact-emergency {
+    display: flex;
+    gap: 18px;
+    padding: 25px;
+    margin-top: 35px;
+    border-radius: 10px;
+    background: var(--navy);
+    color: var(--white);
+}
+
+.contact-emergency-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--yellow);
+    color: var(--navy);
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.contact-emergency h3 {
+    margin-bottom: 4px;
+    font-size: 1rem;
+}
+
+.contact-emergency p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 0.86rem;
+    margin-bottom: 8px;
+}
+
+.contact-emergency a {
+    color: var(--yellow);
+    font-size: 0.88rem;
+    font-weight: 800;
+}
+
+.contact-emergency a:hover {
+    color: var(--white);
+}
+
+
+/* =========================================
+   QUOTE FORM
+========================================= */
+
+.quote-form-wrapper {
+    background: var(--white);
+    padding: 42px;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border);
+}
+
+.quote-form-header {
+    margin-bottom: 30px;
+}
+
+.quote-form-header h2 {
+    color: var(--navy);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    line-height: 1.15;
+    margin-bottom: 10px;
+}
+
+.quote-form-header p:last-child {
+    color: var(--gray);
+    font-size: 0.92rem;
+}
+
+.quote-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group-full {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: var(--navy);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    padding: 13px 14px;
+    background: var(--white);
+    color: var(--dark);
+    font-family: inherit;
+    font-size: 0.92rem;
+    outline: none;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.form-group input,
+.form-group select {
+    min-height: 48px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #98a2b3;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(11, 31, 51, 0.08);
+}
+
+.form-submit {
+    margin-top: 5px;
+}
+
+.form-submit .btn {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    width: fit-content;
+}
+
+.form-submit p {
+    color: var(--gray);
+    font-size: 0.78rem;
+    margin-top: 10px;
+}
+
+
+/* =========================================
+   CONTACT PAGE RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+    }
+
+    .contact-info {
+        max-width: 700px;
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    .contact-section {
+        padding: 75px 0;
+    }
+
+    .quote-form-wrapper {
+        padding: 30px 22px;
+    }
+
+    .quote-form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group-full {
+        grid-column: auto;
+    }
+
+    .form-submit .btn {
+        width: 100%;
+    }
+
+}
